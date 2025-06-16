@@ -1,0 +1,688 @@
+{% extends 'core/base.html' %}
+{% block title %}MadaVoyage - L'essence de Madagascar{% endblock %}
+{% block content %}
+<section id="accueil" class="pt-16 relative">
+    <div class="carousel-container relative h-screen max-h-[700px] overflow-hidden">
+        <!-- Carousel items -->
+        <div class="carousel-item absolute inset-0 w-full h-full flex items-center justify-center opacity-0">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80" 
+                 alt="Baobabs de Madagascar" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+                <div class="text-white max-w-3xl animate-fade-in delay-200">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-4">Découvrez les Baobabs Légendaires</h2>
+                    <p class="text-xl mb-8">Voyagez à travers l'allée des baobabs, un spectacle naturel unique au monde.</p>
+                    <button class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-medium text-lg transition">
+                        Explorer maintenant
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-item absolute inset-0 w-full h-full flex items-center justify-center opacity-0">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80" 
+                 alt="Plages de Madagascar" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+                <div class="text-white max-w-3xl animate-fade-in delay-200">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-4">Plages Paradisiaques</h2>
+                    <p class="text-xl mb-8">Détendez-vous sur les plus belles plages de l'océan Indien, aux eaux turquoises et sable fin.</p>
+                    <button class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-medium text-lg transition">
+                        Découvrir les plages
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-item absolute inset-0 w-full h-full flex items-center justify-center opacity-0">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80" 
+                 alt="Faune de Madagascar" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+                <div class="text-white max-w-3xl animate-fade-in delay-200">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-4">Rencontrez les Lémuriens</h2>
+                    <p class="text-xl mb-8">Partez à la rencontre des espèces endémiques de Madagascar, dont les célèbres lémuriens.</p>
+                    <button class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-medium text-lg transition">
+                        Voir les circuits
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carousel controls -->
+        <button id="prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 hover:bg-opacity-70 transition">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="next-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 hover:bg-opacity-70 transition">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <!-- Carousel indicators -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+            <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition" data-index="0"></button>
+            <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition" data-index="1"></button>
+            <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition" data-index="2"></button>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 animate-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Pourquoi choisir <span class="text-amber-500">MadaVoyage</span> ?</h2>
+                <p class="text-gray-600 mb-6 text-lg">
+                    Depuis 2010, MadaVoyage vous propose des expériences de voyage uniques à Madagascar. Notre expertise locale et notre passion pour cette île extraordinaire nous permettent de créer des circuits sur mesure qui vous feront découvrir les trésors cachés de Madagascar.
+                </p>
+                <p class="text-gray-600 mb-8 text-lg">
+                    Nous travaillons en étroite collaboration avec les communautés locales pour vous offrir une expérience authentique tout en contribuant au développement durable du pays.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="flex items-center bg-amber-50 px-4 py-2 rounded-full">
+                        <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                        <span class="text-gray-700">Experts locaux</span>
+                    </div>
+                    <div class="flex items-center bg-amber-50 px-4 py-2 rounded-full">
+                        <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                        <span class="text-gray-700">Voyages responsables</span>
+                    </div>
+                    <div class="flex items-center bg-amber-50 px-4 py-2 rounded-full">
+                        <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                        <span class="text-gray-700">Service personnalisé</span>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative animate-fade-in delay-200">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80" 
+                         alt="Équipe MadaVoyage" 
+                         class="w-full rounded-lg shadow-xl">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg w-3/4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">15 000+ voyageurs satisfaits</h3>
+                        <p class="text-gray-600">Depuis notre création, nous avons accompagné des milliers de voyageurs dans leur découverte de Madagascar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Destinations Section -->
+<section id="destinations" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate-fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nos <span class="text-amber-500">Destinations</span> Phares</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Découvrez les incontournables de Madagascar à travers nos destinations les plus prisées.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Destination 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover animate-fade-in delay-100">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80" 
+                         alt="Allée des Baobabs" 
+                         class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h3 class="text-2xl font-bold">Allée des Baobabs</h3>
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Morondava
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">
+                        L'allée des Baobabs est un paysage unique au monde, avec ses baobabs géants vieux de plus de 800 ans alignés sur une piste de terre.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <div class="text-amber-500 font-bold">
+                            À partir de <span class="text-2xl">€890</span>
+                        </div>
+                        <button class="text-amber-500 hover:text-amber-600 font-medium flex items-center">
+                            Voir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Destination 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover animate-fade-in delay-200">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80" 
+                         alt="Nosy Be" 
+                         class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h3 class="text-2xl font-bold">Nosy Be</h3>
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Nord-Ouest de Madagascar
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">
+                        L'île aux parfums vous accueille avec ses plages de sable blanc, ses eaux turquoises et ses plantations d'ylang-ylang.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <div class="text-amber-500 font-bold">
+                            À partir de <span class="text-2xl">€1,250</span>
+                        </div>
+                        <button class="text-amber-500 hover:text-amber-600 font-medium flex items-center">
+                            Voir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Destination 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover animate-fade-in delay-300">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80" 
+                         alt="Parc National de l'Isalo" 
+                         class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h3 class="text-2xl font-bold">Parc National de l'Isalo</h3>
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Sud de Madagascar
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">
+                        Ce parc spectaculaire offre des paysages de canyons, piscines naturelles et formations rocheuses étonnantes.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <div class="text-amber-500 font-bold">
+                            À partir de <span class="text-2xl">€750</span>
+                        </div>
+                        <button class="text-amber-500 hover:text-amber-600 font-medium flex items-center">
+                            Voir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12 animate-fade-in delay-400">
+            <button class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-medium text-lg transition">
+                Voir toutes nos destinations
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Circuits Section -->
+<section id="circuits" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate-fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nos <span class="text-amber-500">Circuits</span> Exclusifs</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Des itinéraires soigneusement conçus pour vous faire vivre l'essence de Madagascar.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <!-- Circuit 1 -->
+            <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg flex flex-col md:flex-row card-hover animate-fade-in delay-100">
+                <div class="md:w-1/3 h-48 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80" 
+                         alt="Circuit Grand Sud" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-gray-800">Grand Sud Malgache</h3>
+                        <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">15 jours</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Un périple complet à travers les paysages époustouflants du sud malgache : baobabs, tsingy, plages et rencontres avec les ethnies locales.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Baobabs</span>
+                        <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Tsingy</span>
+                        <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Rencontres locales</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-amber-500 font-bold text-xl">
+                            €1,890
+                        </div>
+                        <button class="text-amber-500 hover:text-amber-600 font-medium flex items-center">
+                            Détails <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Circuit 2 -->
+            <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg flex flex-col md:flex-row card-hover animate-fade-in delay-200">
+                <div class="md:w-1/3 h-48 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80" 
+                         alt="Circuit Nord" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-gray-800">Aventure Nordique</h3>
+                        <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">12 jours</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Découverte des trésors du nord : montagne d'Ambre, tsingy rouges, plages paradisiaques de Nosy Be et rencontre avec les lémuriens.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Lémuriens</span>
+                        <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Plages</span>
+                        <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Randonnée</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-amber-500 font-bold text-xl">
+                            €2,150
+                        </div>
+                        <button class="text-amber-500 hover:text-amber-600 font-medium flex items-center">
+                            Détails <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Mini Circuit 1 -->
+            <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg card-hover animate-fade-in delay-300">
+                <div class="h-48">
+                    <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80" 
+                         alt="Echappée Baobab" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Échappée Baobab</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Un court séjour pour découvrir l'emblématique allée des baobabs et les environs de Morondava.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <div class="text-amber-500 font-bold">
+                            4 jours - €490
+                        </div>
+                        <button class="text-amber-500 hover:text-amber-600 text-sm font-medium">
+                            Voir
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mini Circuit 2 -->
+            <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg card-hover animate-fade-in delay-400">
+                <div class="h-48">
+                    <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80" 
+                         alt="Nosy Be Détente" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Nosy Be Détente</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Séjour balnéaire sur l'île aux parfums avec excursions vers les îlots environnants.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <div class="text-amber-500 font-bold">
+                            7 jours - €890
+                        </div>
+                        <button class="text-amber-500 hover:text-amber-600 text-sm font-medium">
+                            Voir
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mini Circuit 3 -->
+            <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg card-hover animate-fade-in delay-500">
+                <div class="h-48">
+                    <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80" 
+                         alt="Rencontre avec les Lémuriens" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Rencontre avec les Lémuriens</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Circuit focalisé sur la découverte des parcs nationaux abritant les célèbres lémuriens de Madagascar.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <div class="text-amber-500 font-bold">
+                            5 jours - €650
+                        </div>
+                        <button class="text-amber-500 hover:text-amber-600 text-sm font-medium">
+                            Voir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12 animate-fade-in delay-500">
+            <button class="border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white px-8 py-3 rounded-full font-medium text-lg transition">
+                Personnaliser mon circuit
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate-fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nos <span class="text-amber-500">Services</span></h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Nous nous occupons de tout pour que vous puissiez profiter pleinement de votre voyage.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center card-hover animate-fade-in delay-100">
+                <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-plane text-amber-500 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Billets d'avion</h3>
+                <p class="text-gray-600">
+                    Nous organisons vos vols internationaux et vos vols intérieurs pour un voyage sans souci.
+                </p>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center card-hover animate-fade-in delay-200">
+                <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-hotel text-amber-500 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Hébergement</h3>
+                <p class="text-gray-600">
+                    Sélection rigoureuse d'hôtels, lodges et guesthouses pour tous les budgets.
+                </p>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center card-hover animate-fade-in delay-300">
+                <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-car text-amber-500 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Transport</h3>
+                <p class="text-gray-600">
+                    Véhicules privés avec chauffeurs expérimentés pour vos déplacements en toute sécurité.
+                </p>
+            </div>
+            
+            <!-- Service 4 -->
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center card-hover animate-fade-in delay-400">
+                <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-user-tie text-amber-500 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Guide francophone</h3>
+                <p class="text-gray-600">
+                    Guides professionnels francophones pour une immersion culturelle enrichissante.
+                </p>
+            </div>
+        </div>
+        
+        <div class="mt-16 bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl p-8 text-white animate-fade-in delay-500">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-2/3 mb-6 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-bold mb-3">Service sur mesure</h3>
+                    <p class="mb-4">
+                        Vous avez un projet de voyage spécifique ? Notre équipe est à votre disposition pour créer un itinéraire 100% personnalisé selon vos envies et votre budget.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Honeymoon</span>
+                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Voyage en famille</span>
+                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Aventure</span>
+                    </div>
+                </div>
+                <div class="md:w-1/3 text-center">
+                    <button class="bg-white text-amber-600 hover:bg-gray-100 px-8 py-3 rounded-full font-medium text-lg transition">
+                        Demander un devis
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate-fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Ils ont voyagé avec <span class="text-amber-500">MadaVoyage</span></h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Découvrez ce que nos voyageurs pensent de leur expérience.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg animate-fade-in delay-100">
+                <div class="flex items-center mb-4">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sophie Martin" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sophie Martin</h4>
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">
+                    "Un voyage extraordinaire grâce à l'organisation impeccable de MadaVoyage. Les guides étaient passionnants et les hébergements parfaitement choisis. Madagascar est un pays magnifique que nous avons pu découvrir en toute sérénité."
+                </p>
+                <div class="mt-4 text-sm text-gray-500">
+                    Circuit Grand Sud - Avril 2023
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg animate-fade-in delay-200">
+                <div class="flex items-center mb-4">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Thomas Lefèvre" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Thomas Lefèvre</h4>
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">
+                    "Nous avons opté pour un circuit sur mesure en famille. Tout était parfaitement adapté à nos enfants. Les chauffeurs étaient très prudents et les activités variées. Un grand merci à toute l'équipe pour ce séjour mémorable."
+                </p>
+                <div class="mt-4 text-sm text-gray-500">
+                    Voyage en famille - Août 2022
+                </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg animate-fade-in delay-300">
+                <div class="flex items-center mb-4">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Élodie Petit" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Élodie Petit</h4>
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">
+                    "Notre voyage de noces à Madagascar a été magique. MadaVoyage a su concilier aventure et romantisme. Les lodges étaient exceptionnels, surtout celui face à l'allée des baobabs au coucher du soleil. Une expérience inoubliable !"
+                </p>
+                <div class="mt-4 text-sm text-gray-500">
+                    Honeymoon - Mai 2023
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Parallax Section -->
+<section class="py-32 bg-gray-800 text-white parallax" style="background-image: url('https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1792&q=80');">
+    <div class="container mx-auto px-4 text-center">
+        <div class="max-w-3xl mx-auto bg-black bg-opacity-50 p-8 rounded-xl animate-fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à vivre l'aventure malgache ?</h2>
+            <p class="text-xl mb-8">
+                Madagascar vous attend avec ses paysages à couper le souffle, sa faune unique et sa culture riche. Laissez-nous vous guider dans cette expérience inoubliable.
+            </p>
+            <button class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-medium text-lg transition">
+                Contactez-nous
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12 animate-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Contactez <span class="text-amber-500">MadaVoyage</span></h2>
+                <p class="text-gray-600 mb-8 text-lg">
+                    Vous avez des questions sur nos circuits ou souhaitez un devis personnalisé ? Notre équipe est à votre disposition pour vous conseiller et organiser votre voyage de rêve à Madagascar.
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                            <i class="fas fa-map-marker-alt text-amber-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">Adresse</h4>
+                            <p class="text-gray-600">Lot II M 47 Bis, Antsakaviro<br>Antananarivo 101, Madagascar</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                            <i class="fas fa-phone-alt text-amber-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">Téléphone</h4>
+                            <p class="text-gray-600">+261 20 22 222 22<br>+261 34 22 222 22</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                            <i class="fas fa-envelope text-amber-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                            <p class="text-gray-600">contact@madavoyage.mg<br>reservation@madavoyage.mg</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="font-bold text-gray-800 mb-4">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-100 hover:bg-amber-500 hover:text-white rounded-full flex items-center justify-center text-gray-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-100 hover:bg-amber-500 hover:text-white rounded-full flex items-center justify-center text-gray-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-100 hover:bg-amber-500 hover:text-white rounded-full flex items-center justify-center text-gray-600 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-100 hover:bg-amber-500 hover:text-white rounded-full flex items-center justify-center text-gray-600 transition">
+                            <i class="fab fa-tripadvisor"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 animate-fade-in delay-200">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Envoyez-nous un message</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Téléphone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Sujet</label>
+                            <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="circuit">Demande d'information sur un circuit</option>
+                                <option value="devis">Demande de devis</option>
+                                <option value="custom">Circuit personnalisé</option>
+                                <option value="other">Autre demande</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-medium transition">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section class="py-12 bg-amber-50">
+    <div class="container mx-auto px-4 text-center">
+        <div class="max-w-3xl mx-auto animate-fade-in">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Abonnez-vous à notre newsletter</h3>
+            <p class="text-gray-600 mb-6">Recevez nos offres spéciales et les dernières actualités sur Madagascar directement dans votre boîte mail.</p>
+            <form class="flex flex-col sm:flex-row max-w-md mx-auto">
+                <input type="email" placeholder="Votre email" class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent mb-2 sm:mb-0 sm:mr-2 flex-grow">
+                <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-medium transition">
+                    S'abonner
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
